@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SagaNix Studios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;500;600&family=Montserrat:wght@800;900&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: '#030303',
+              'warm-black': '#0C0804',
+              'deep-black': '#000000',
+              gold: '#D8B336',
+              'antique-gold': '#A67C1F',
+              ivory: '#F5EAD2',
+              steel: '#9D9483', // Secondary muted text
+              'pale-blue': '#CFC7B2', // Main body text
+            },
+            fontFamily: {
+              display: ['Montserrat', 'sans-serif'],
+              body: ['Inter', 'sans-serif'],
+              serif: ['Cinzel', 'serif'],
+              mono: ['Space Grotesk', 'sans-serif'],
+            },
+            cursor: {
+              none: 'none',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom utility for outlined text */
+      .text-outline {
+        -webkit-text-stroke: 1px #F5EAD2;
+        color: transparent;
+      }
+      .text-outline-gold {
+         -webkit-text-stroke: 1px #D8B336;
+         color: transparent;
+      }
+      body {
+        cursor: none; /* Hide default cursor for custom one */
+        background-color: #030303;
+        color: #F5EAD2;
+      }
+      /* Hide scrollbar for cleaner look */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #030303;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 4px;
+      }
+      .bg-glass {
+        background-color: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(10px);
+      }
+      .border-glass-gold {
+        border-color: rgba(216, 179, 54, 0.18);
+      }
+      .overlay-dark {
+        background-color: rgba(0, 0, 0, 0.55);
+      }
+      /* Film grain effect */
+      .bg-grain {
+        position: relative;
+      }
+      .bg-grain::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        opacity: 0.03;
+        background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)"/%3E%3C/svg%3E');
+        pointer-events: none;
+        z-index: 10;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

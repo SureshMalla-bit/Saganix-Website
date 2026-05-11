@@ -1,0 +1,31 @@
+/* css/style.css */
+
+/* Custom utility for outlined text */
+.text-outline {
+  -webkit-text-stroke: 2px white;
+  color: transparent;
+}
+
+.text-outline-gold {
+  -webkit-text-stroke: 1px #8C7830;
+  color: transparent;
+}
+
+body {
+  cursor: none; /* Hide default cursor for custom one */
+  background-color: #050505;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
