@@ -32,7 +32,7 @@ const AppInner: React.FC = () => {
 
   if (location.pathname === '/hub') {
     return (
-      <div className="bg-background min-h-screen text-ivory selection:bg-gold selection:text-background overflow-hidden relative bg-grain">
+      <div className="bg-black min-h-screen text-ivory selection:bg-gold selection:text-background overflow-hidden relative">
         <CustomCursor />
         <Hub
           onEnterProduction={() => navigate('/')}
@@ -43,7 +43,7 @@ const AppInner: React.FC = () => {
   }
 
   return (
-    <div className="bg-background min-h-screen text-ivory selection:bg-gold selection:text-background overflow-x-hidden relative bg-grain animate-in fade-in duration-1000">
+    <div className="bg-black min-h-screen text-ivory selection:bg-gold selection:text-background overflow-x-hidden relative animate-in fade-in duration-1000">
       <CustomCursor />
       <Navbar
         onOpenForm={() => setIsFormOpen(true)}

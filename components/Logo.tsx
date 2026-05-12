@@ -6,7 +6,7 @@ export const Logo: React.FC<{ className?: string }> = ({ className = "" }) => {
       <img
         src="/Images/Saganix%20Logo.png"
         alt="Saganix Studios"
-        className="h-14 md:h-16 w-auto object-contain"
+        className="h-16 md:h-20 w-auto object-contain"
       />
     </div>
   );
