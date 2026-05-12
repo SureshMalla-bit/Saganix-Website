@@ -1,8 +1,14 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 export const PrivacyPolicy: React.FC<{ onNavigate: (view: string) => void }> = ({ onNavigate }) => {
   return (
     <div className="flex flex-col bg-background pt-24 md:pt-28 min-h-screen">
+      <Helmet>
+        <title>Privacy Policy | Saganix Studios — AISU NXT LLP</title>
+        <meta name="description" content="Privacy Policy for Saganix Studios (AISU NXT LLP). Learn how we collect, store and protect your data. AI film production studio based in Hyderabad, India." />
+        <link rel="canonical" href="https://saganixstudios.com/privacy" />
+      </Helmet>
       <section className="py-16 md:py-24 px-6 md:px-12 max-w-[900px] mx-auto w-full">
 
         <p className="font-mono text-xs text-[#D8B336] uppercase tracking-widest mb-6 border-l border-[#D8B336] pl-4">

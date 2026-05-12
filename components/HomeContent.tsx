@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'motion/react';
 import { Hero } from './Hero';
 import { FinalCTA } from './FinalCTA';
@@ -6,7 +7,15 @@ import { FinalCTA } from './FinalCTA';
 export const HomeContent: React.FC<{ onNavigate: (view: string) => void; onOpenForm: () => void }> = ({ onNavigate, onOpenForm }) => {
   return (
     <div className="flex flex-col bg-background">
-      
+      <Helmet>
+        <title>Saganix Studios — AI Film & Visual Production Studio | Hyderabad, India</title>
+        <meta name="description" content="Saganix Studios is India's leading AI film and visual production studio in Hyderabad. We create full-length AI movies, short films, AI VFX, trailers, and brand commercials using cinematic generative pipelines." />
+        <link rel="canonical" href="https://saganixstudios.com/" />
+        <meta property="og:title" content="Saganix Studios — AI Film & Visual Production Studio | Hyderabad, India" />
+        <meta property="og:description" content="India's leading AI film and visual production studio. Full-length AI movies, short films, AI VFX, and brand commercials built with cinematic generative pipelines." />
+        <meta property="og:url" content="https://saganixstudios.com/" />
+      </Helmet>
+
       <Hero onOpenForm={onOpenForm} />
 
       {/* 2. Premium Intro Boxes */}

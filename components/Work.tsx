@@ -1,10 +1,20 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'motion/react';
 import { FinalCTA } from './FinalCTA';
 
 export const Work: React.FC<{ onNavigate: (view: string) => void }> = ({ onNavigate }) => {
   return (
     <div className="flex flex-col bg-background pt-24 md:pt-28">
+      <Helmet>
+        <title>Our Films & Work | Award-Winning AI Film Portfolio — Saganix Studios Hyderabad</title>
+        <meta name="description" content="Explore Saganix Studios' AI film portfolio — Lieutenant Norman: Bhairava, Sardar Sarvai Papanna, and Jai Kisaan (9x international award winner). AI film production studio based in Hyderabad, India." />
+        <link rel="canonical" href="https://saganixstudios.com/work" />
+        <meta property="og:title" content="Our Films & Work | AI Film Portfolio — Saganix Studios" />
+        <meta property="og:description" content="Award-winning AI films by Saganix Studios — Hyderabad's leading AI film production studio. View our portfolio of feature films, short films, and cinematic AI productions." />
+        <meta property="og:url" content="https://saganixstudios.com/work" />
+      </Helmet>
+
       {/* 1. Work Hero */}
       <section className="pt-16 md:pt-24 pb-12 md:pb-16 px-6 md:px-12 max-w-[1440px] mx-auto w-full relative">
         <div className="max-w-4xl">

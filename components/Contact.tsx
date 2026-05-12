@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 // Google Apps Script URL
 const SCRIPT_URL: string = "https://script.google.com/macros/s/AKfycbz_jsmamor3Q-UKIqlZ0UQb3Ki1qUAQop-dwThAefkZgi6zCkmsunE2NzgxSuE9pjmd/exec"; 
@@ -66,6 +67,15 @@ export const Contact: React.FC = () => {
   };
 
   return (
+    <>
+    <Helmet>
+      <title>Contact Saganix Studios — Book an AI Film Project | Hyderabad, India</title>
+      <meta name="description" content="Start your AI film project with Saganix Studios. Contact India's leading AI film production studio in Hyderabad for movies, short films, AI VFX, and brand commercials. Email: studio@saganixstudios.com" />
+      <link rel="canonical" href="https://saganixstudios.com/contact" />
+      <meta property="og:title" content="Contact Saganix Studios — Book an AI Film Project | Hyderabad" />
+      <meta property="og:description" content="Ready to create your AI film? Contact Saganix Studios in Hyderabad — India's leading AI film and visual production studio." />
+      <meta property="og:url" content="https://saganixstudios.com/contact" />
+    </Helmet>
     <div className="flex flex-col bg-background pt-24 md:pt-28">
       
       {/* 1. Contact Hero */}
@@ -258,5 +268,6 @@ export const Contact: React.FC = () => {
       </section>
 
     </div>
+    </>
   );
 };

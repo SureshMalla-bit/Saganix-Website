@@ -1,10 +1,20 @@
 
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { FinalCTA } from './FinalCTA';
 
 export const Services: React.FC<{ onNavigate: (view: string) => void }> = ({ onNavigate }) => {
   return (
     <div className="flex flex-col bg-background pt-24 md:pt-28">
+      <Helmet>
+        <title>AI Film Production Services — Movies, VFX, Brand Commercials | Saganix Studios Hyderabad</title>
+        <meta name="description" content="Saganix Studios offers end-to-end AI film production services in India — full-length AI movies, short films, trailers, pre-visualisation, AI VFX, and AI brand commercials. Based in Hyderabad, serving clients across India." />
+        <link rel="canonical" href="https://saganixstudios.com/services" />
+        <meta property="og:title" content="AI Film Production Services | Saganix Studios Hyderabad" />
+        <meta property="og:description" content="End-to-end AI film production — movies, short films, VFX, trailers, and brand commercials. India's leading AI studio based in Hyderabad." />
+        <meta property="og:url" content="https://saganixstudios.com/services" />
+      </Helmet>
+
       {/* 1. Services Hero */}
       <section className="pt-16 md:pt-24 pb-12 md:pb-16 px-6 md:px-12 max-w-[1440px] mx-auto w-full">
         <div className="max-w-4xl">

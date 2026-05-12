@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'motion/react';
 import { Logo } from './Logo';
 import { FinalCTA } from './FinalCTA';
@@ -7,6 +8,15 @@ import { FinalCTA } from './FinalCTA';
 export const About: React.FC<{ onNavigate: (view: string) => void }> = ({ onNavigate }) => {
   return (
     <div className="flex flex-col bg-background pt-24 md:pt-28">
+      <Helmet>
+        <title>About Saganix Studios — AI Film Studio Founded in Hyderabad, India | AISU NXT LLP</title>
+        <meta name="description" content="Saganix Studios (AISU NXT LLP) is an AI-native film and visual production studio founded in Hyderabad in 2024. Led by Suresh Malla and Aishyani N Malla, we combine cinematic taste with generative AI workflows." />
+        <link rel="canonical" href="https://saganixstudios.com/about" />
+        <meta property="og:title" content="About Saganix Studios — AI Film Studio | Hyderabad, India" />
+        <meta property="og:description" content="AI-native film and visual production studio founded in Hyderabad. Combining cinematic direction with generative AI workflows for feature films, short films, and brand commercials." />
+        <meta property="og:url" content="https://saganixstudios.com/about" />
+      </Helmet>
+
       {/* 1. About Hero */}
       <section className="pt-16 md:pt-24 pb-16 md:pb-20 px-6 md:px-12 max-w-[1440px] mx-auto w-full relative">
         <div className="flex flex-col md:flex-row justify-between items-start gap-8">
