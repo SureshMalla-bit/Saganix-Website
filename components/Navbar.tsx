@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'motion/react';
 interface NavbarProps {
   onOpenForm: () => void;
   onGoToHub: () => void;
-  onNavigate: (view: 'home' | 'work' | 'about' | 'services' | 'contact') => void;
+  onNavigate: (view: string) => void;
   currentView?: string;
 }
 
