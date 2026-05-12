@@ -40,8 +40,8 @@ export const Work: React.FC<{ onNavigate: (view: string) => void }> = ({ onNavig
             title: "Lieutenant Norman: Bhairava",
             tags: "AI Feature Film",
             credits: "Generative AI Visuals & VFX — SagaNix Studios\nAI Cinematography — Suresh Malla & Aishyani N Malla",
-            badge: "From Amazon Bestseller Novel",
-            desc: "Full-length AI feature film based on the Amazon Bestseller Novel by Goutham Kool Monkk. SagaNix handled generative AI visuals, cinematography, VFX, sound designing, and complete post-production for Pings Cineworks.",
+            badge: "A Tale of Unspoken Valor",
+            desc: "Beyond the frontlines lies a story of loyalty that words cannot capture. Lieutenant Norman: Bhairava is a cinematic tribute to the silent guardians of the Indian Army — the K9 units. Currently in post-production, this film utilizes a 100% AI-powered visual pipeline to render the raw emotion and grit of the battlefield. It's more than a war movie; it's a deep dive into the bond between a soldier and his most faithful ally, crafted with a Future-Noir sensibility.",
             img: "/Images/Norman%20Poster.png"
           },
           {
@@ -49,17 +49,17 @@ export const Work: React.FC<{ onNavigate: (view: string) => void }> = ({ onNavig
             title: "Sardar Sarvai Papanna",
             tags: "AI Historical Epic",
             credits: "AI Powered — SagaNix Studios\nAI Lead Visual Artists — Suresh Malla & Aishyani N Malla",
-            badge: "The Rebel King of Telangana",
-            desc: "Epic historical AI film about the Rebel King of Telangana. SagaNix Studios led AI visual production for VG Movie Makers, with Story, Screenplay & Direction by Venkatesh Goud Lingampally.",
+            badge: "The Rebel Lion of Telangana",
+            desc: "A relentless pursuit of cinematic perfection. Saganix Studios led the AI visual production for Sardar Sarvai Papanna Goud. From relentless character consistency to sprawling historical landscapes, our team pushed the boundaries of AI cinematography to create a visceral, high-stakes experience. Witness the rise of a warrior who defied an empire, rendered in stunning 4K detail.",
             img: "/Images/Papanna%20Poster.png"
           },
           {
             num: "03",
-            title: "Jai Kisaan",
+            title: "Jai Kisaan: Laut Aya Beta",
             tags: "Award-Winning AI Short Film",
-            credits: "AI Animation — Suresh Malla / SagaNix Studios\nMusic & Arrangements — Kool Monkk",
-            badge: "9x International Award Winner",
-            desc: "Winner at Buddha International Film Festival 2026, Dada Saheb Phalke Film Festival-26, Asian Talent International Film Festival, Jaipur International Film Festival, Global Cineverse Film Festival, and more.",
+            credits: "AI Animation — Suresh Malla / SagaNix Studios\nDirected by — Goutham Kool Monk",
+            badge: "An Award-Winning AI Odyssey",
+            desc: "A global triumph in AI-driven storytelling. Jai Kisaan: Laut Aya Beta, directed by Goutham Kool Monk, is a multi-award-winning short film that has captivated international film festivals. Saganix Studios spearheaded the animation and post-production, utilizing a bespoke AI workflow to translate deep human emotions into a high-fidelity visual experience. From the soil of the heartland to the global stage, this film proves that technology, when guided by vision, can touch the soul.",
             img: "/Images/Jai%20Kisan%20Poster.png"
           }
         ].map((project, i) => (
