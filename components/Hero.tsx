@@ -1,7 +1,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 
-export const Hero: React.FC = () => {
+export const Hero: React.FC<{ onOpenForm: () => void }> = ({ onOpenForm }) => {
   const [heroVideos, setHeroVideos] = useState<string[]>([]);
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -62,7 +62,7 @@ export const Hero: React.FC = () => {
             <source src={heroVideos[currentVideoIndex]} type="video/mp4" />
           </video>
         ) : (
-          <img src="/Images/bg1.png" alt="Hero Background" className="w-full h-full object-cover opacity-40 contrast-110" />
+          <img src="/Images/jai-kisaan.jpg" alt="Hero Background" className="w-full h-full object-cover opacity-40 contrast-110" />
         )}
         {/* Dark Cinematic Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/20 to-background" />
@@ -85,9 +85,16 @@ export const Hero: React.FC = () => {
             INDIA’S NEXT-GEN AI FILM & VISUAL PRODUCTION STUDIO
           </h2>
           
-          <p className="font-mono text-gold text-[9px] md:text-[10px] tracking-[0.4em] uppercase mb-12">
+          <p className="font-mono text-gold text-[9px] md:text-[10px] tracking-[0.4em] uppercase mb-8">
             Visual Architecture — Est. 2024
           </p>
+
+          <button
+            onClick={onOpenForm}
+            className="px-8 py-4 bg-gold hover:bg-gold/90 text-background font-mono text-xs font-bold tracking-widest uppercase transition-all duration-300"
+          >
+            Book a Call
+          </button>
         </div>
       </div>
     </section>

@@ -3,11 +3,11 @@ import { motion } from 'motion/react';
 import { Hero } from './Hero';
 import { FinalCTA } from './FinalCTA';
 
-export const HomeContent: React.FC<{ onNavigate: (view: string) => void }> = ({ onNavigate }) => {
+export const HomeContent: React.FC<{ onNavigate: (view: string) => void; onOpenForm: () => void }> = ({ onNavigate, onOpenForm }) => {
   return (
     <div className="flex flex-col bg-background">
       
-      <Hero />
+      <Hero onOpenForm={onOpenForm} />
 
       {/* 2. Premium Intro Boxes */}
       <section className="relative w-full max-w-[1440px] mx-auto px-6 md:px-12 pt-16 md:pt-28 pb-10 md:pb-16 z-20">
@@ -55,54 +55,50 @@ export const HomeContent: React.FC<{ onNavigate: (view: string) => void }> = ({ 
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
           {[
-            { 
+            {
               num: "01",
-              title: "Full-Length AI Movie Pipeline", 
-              desc: "Feature-length cinematic development from story to final visual delivery.",
-              img: "/Images/bg1.png"
+              title: "Lieutenant Norman: Bhairava",
+              tag: "AI Feature Film",
+              desc: "Generative AI visuals, cinematography & full post-production. Based on the Amazon Bestseller Novel by Goutham Kool Monkk.",
+              img: "/Images/lieutenant-norman.jpg"
             },
-            { 
+            {
               num: "02",
-              title: "Short Film / Trailer System", 
-              desc: "High-impact short films, teasers, trailers, and cinematic sequences.",
-              img: "/Images/bg2.png"
+              title: "Sardar Sarvai Papanna",
+              tag: "AI Historical Epic",
+              desc: "The Rebel King of Telangana. AI-powered epic historical — visuals, VFX & cinematography by Suresh Malla & Aishyani N Malla.",
+              img: "/Images/papanna.jpg"
             },
-            { 
+            {
               num: "03",
-              title: "Pre-Visualisation", 
-              desc: "Storyboards, shot design, scene blocking, and production-ready visual planning.",
-              img: "/Images/bg3.png"
-            },
-            { 
-              num: "04",
-              title: "AI VFX / Brand Commercials", 
-              desc: "Scene extensions, impossible visuals, product films, and campaign-ready commercials.",
-              img: "/Images/bg1.png"
+              title: "Jai Kisaan",
+              tag: "9x Award-Winning AI Short Film",
+              desc: "Winner — Buddha IFF, Dada Saheb Phalke, Asian Talent IFF & more. AI Animation by SagaNix Studios.",
+              img: "/Images/jai-kisaan.jpg"
             }
           ].map((work, i) => (
-            <motion.div 
-              key={i} 
+            <motion.div
+              key={i}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.7, delay: i * 0.1 }}
-              className="group relative flex flex-col gap-6 cursor-pointer" 
+              className="group relative flex flex-col gap-6 cursor-pointer"
               onClick={() => onNavigate('work')}
             >
-              <div className="w-full aspect-[4/3] md:aspect-video border border-gold/10 overflow-hidden relative bg-warm-black">
+              <div className="w-full aspect-video border border-gold/10 overflow-hidden relative bg-warm-black">
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-700 z-10" />
                 <div className="absolute inset-0 border border-gold/0 group-hover:border-gold/30 transition-all duration-500 z-20" />
-                
-                {/* Temporary placeholder image */}
                 <img src={work.img} alt={work.title} className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-[2s] ease-out" />
               </div>
-              
+
               <div className="flex flex-col">
-                <span className="font-mono text-[10px] text-gold uppercase tracking-widest mb-3">
-                  {work.num}
-                </span>
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="font-mono text-[10px] text-gold uppercase tracking-widest">{work.num}</span>
+                  <span className="font-mono text-[9px] text-gold/50 uppercase tracking-widest border border-gold/20 px-2 py-0.5">{work.tag}</span>
+                </div>
                 <h3 className="font-display font-bold text-2xl md:text-3xl uppercase tracking-tight text-ivory group-hover:text-[#D8B336] transition-colors mb-2">
                   {work.title}
                 </h3>

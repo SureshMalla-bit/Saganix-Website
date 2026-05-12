@@ -44,7 +44,7 @@ const App: React.FC = () => {
             return <Work onNavigate={(v) => setView(v as any)} />;
         case 'home':
         default:
-            return <HomeContent onNavigate={(v) => setView(v as any)} />;
+            return <HomeContent onNavigate={(v) => setView(v as any)} onOpenForm={() => setIsFormOpen(true)} />;
     }
   };
 

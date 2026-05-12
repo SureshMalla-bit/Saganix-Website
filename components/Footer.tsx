@@ -61,8 +61,8 @@ export const Footer: React.FC<FooterProps> = ({ onGoToHub, onNavigate }) => {
              <h4 className="font-mono text-[10px] text-[#D8B336] tracking-widest uppercase mb-6 text-left w-full">Network</h4>
              <div className="flex flex-col space-y-4 items-start">
                 <a href="https://www.instagram.com/saganixstudios" target="_blank" rel="noopener noreferrer" className="font-body text-sm text-[#CFC7B2] hover:text-ivory transition-colors">Instagram</a>
-                <a href="#" className="font-body text-sm text-[#CFC7B2] hover:text-ivory transition-colors">LinkedIn</a>
-                <a href="#" className="font-body text-sm text-[#CFC7B2] hover:text-ivory transition-colors">WhatsApp</a>
+                <a href="https://www.linkedin.com/company/saganix-studios" target="_blank" rel="noopener noreferrer" className="font-body text-sm text-[#CFC7B2] hover:text-ivory transition-colors">LinkedIn</a>
+                <a href="https://wa.me/919032731155" target="_blank" rel="noopener noreferrer" className="font-body text-sm text-[#CFC7B2] hover:text-ivory transition-colors">WhatsApp</a>
              </div>
           </div>
 
