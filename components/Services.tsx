@@ -4,23 +4,23 @@ import { FinalCTA } from './FinalCTA';
 
 export const Services: React.FC<{ onNavigate: (view: string) => void }> = ({ onNavigate }) => {
   return (
-    <div className="flex flex-col bg-background pt-28">
+    <div className="flex flex-col bg-background pt-24 md:pt-28">
       {/* 1. Services Hero */}
-      <section className="py-24 md:py-32 px-6 md:px-12 max-w-[1440px] mx-auto w-full">
+      <section className="pt-16 md:pt-24 pb-12 md:pb-16 px-6 md:px-12 max-w-[1440px] mx-auto w-full">
         <div className="max-w-4xl">
           <p className="font-mono text-xs text-[#D8B336] uppercase tracking-widest mb-6 border-l border-[#D8B336] pl-4">
-            Capabilities
+            CAPABILITIES
           </p>
           <h1 className="font-display font-black text-4xl md:text-5xl uppercase tracking-tight mb-8 leading-[1.1]">
-            <span className="text-ivory block mb-2">SERVICE</span>
-            <span className="block text-transparent" style={{ WebkitTextStroke: '1px #CFC7B2' }}>SUITE.</span>
+            <span className="text-ivory block mb-2">END-TO-END AI FILM</span>
+            <span className="block text-transparent" style={{ WebkitTextStroke: '1px #CFC7B2' }}>PRODUCTION.</span>
           </h1>
           <p className="font-body text-[#CFC7B2] text-base md:text-xl max-w-2xl leading-relaxed mb-12">
-            Production-ready visual services for films, brands, creators, agencies, and cinematic world-building projects.
+            We create full-length AI movies, short films, trailers, pre-visualisation, AI VFX, and AI brand commercials using cinematic generative production pipelines.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6">
-            <button className="px-8 py-4 bg-gold hover:bg-gold/90 text-background font-mono text-sm font-bold tracking-widest uppercase transition-all duration-300">
+            <button onClick={() => onNavigate('contact')} className="px-8 py-4 bg-gold hover:bg-gold/90 text-background font-mono text-sm font-bold tracking-widest uppercase transition-all duration-300">
               Start a project
             </button>
             <button onClick={() => onNavigate('work')} className="px-8 py-4 border border-gold/50 hover:bg-gold/10 text-gold font-mono text-sm font-bold tracking-widest uppercase transition-all duration-300">
@@ -31,59 +31,68 @@ export const Services: React.FC<{ onNavigate: (view: string) => void }> = ({ onN
       </section>
 
       {/* 2. Service Index */}
-      <section className="pb-24 md:pb-32 px-6 md:px-12 max-w-[1440px] mx-auto w-full">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative">
+      <section className="pb-16 md:pb-24 px-6 md:px-12 max-w-[1440px] mx-auto w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative">
           {/* Subtle background glow */}
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#D8B336]/5 via-transparent to-transparent opacity-40 pointer-events-none"></div>
 
           {[
             { 
               num: "01", 
-              title: "AI Film Production", 
-              desc: "Cinematic AI sequences, trailers, music videos, short films, and social-first film assets.",
-              tags: ["Trailers", "Music Videos", "Film Assets"]
+              title: "Full-Length AI Movies", 
+              desc: "End-to-end AI-powered movie production support for feature-length films — from story, screenplay direction, character and world design to pre-visualisation, AI cinematography, VFX, edit direction, and final delivery.",
+              tags: ["Story concept", "Screenplay direction", "Character bible", "World bible", "Shot breakdown", "Pre-visualisation", "AI cinematography", "AI VFX", "Edit direction", "Sound direction", "Final delivery formats"],
+              span: "md:col-span-2"
             },
             { 
               num: "02", 
-              title: "Pre-Visualisation", 
-              desc: "Storyboards, concept frames, production looks, and execution-ready visual plans.",
-              tags: ["Storyboards", "Concept Frames", "Look Development"]
+              title: "Short Films & Trailers", 
+              desc: "Cinematic short films, teasers, trailers, proof-of-concept films, and music-led visual sequences built with structured AI production workflows.",
+              tags: ["Concept development", "Trailer structure", "Shot design", "Cinematic keyframes", "AI video sequences", "Scene generation", "Motion prompts", "Edit pacing", "Final exports"],
+              span: "lg:col-span-1"
             },
             { 
               num: "03", 
-              title: "Character & World Design", 
-              desc: "Consistent characters, divine figures, costumes, props, environments, and world-building systems.",
-              tags: ["Character Sheets", "Costume Systems", "World Concepts"]
+              title: "Pre-Visualisation", 
+              desc: "Production-ready visual planning for films, trailers, commercials, and cinematic worlds before full production begins.",
+              tags: ["Storyboards", "Scene blocking", "Shot breakdowns", "Look development", "Production design references", "Camera language", "Moodboards", "Proof-of-concept frames"],
+              span: "lg:col-span-1"
             },
             { 
               num: "04", 
-              title: "AI VFX & Post Visuals", 
-              desc: "Scene extensions, clean plates, atmosphere, lighting, impossible visuals, and cinematic enhancement.",
-              tags: ["Clean Plates", "Scene Extension", "Lighting FX"]
+              title: "AI VFX", 
+              desc: "AI-enhanced VFX workflows for world extension, impossible visuals, atmospheric effects, character continuity, clean plates, and cinematic enhancement.",
+              tags: ["Scene extensions", "Atmospheric FX", "Clean-plate generation", "Face and character locking", "Digital doubles", "Lighting re-projection", "Background replacement", "Impossible shots"],
+              span: "lg:col-span-1"
+            },
+            { 
+              num: "05", 
+              title: "AI Brand Commercials", 
+              desc: "Cinematic AI commercials for brands, products, campaigns, launches, and social-first advertising.",
+              tags: ["Product films", "Brand films", "Launch commercials", "Campaign visuals", "AI UGC-style videos", "Product keyframes", "Social video exports", "Ad creative variations"],
+              span: "lg:col-span-1"
             }
           ].map((srv, i) => (
-            <div key={i} className="group flex flex-col justify-between border border-[#D8B336]/10 bg-white/[0.015] p-8 md:p-12 min-h-[340px] hover:border-[#D8B336]/30 hover:bg-white/[0.03] transition-all duration-500 overflow-hidden relative cursor-pointer">
+            <div key={i} className={`group flex flex-col justify-between border border-[#D8B336]/10 bg-white/[0.015] p-8 md:p-12 min-h-[380px] hover:border-[#D8B336]/30 hover:bg-white/[0.03] transition-all duration-500 overflow-hidden relative cursor-default ${srv.span || ''}`}>
               {/* Subtle hover gradient */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#D8B336]/0 to-[#D8B336]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
               
               <div className="relative z-10">
                 <div className="flex justify-between items-start mb-8">
                    <span className="font-mono text-[#D8B336]/60 group-hover:text-[#D8B336] text-sm md:text-base font-bold transition-colors">{srv.num}</span>
-                   <span className="font-mono text-[10px] text-[#D8B336]/0 group-hover:text-[#D8B336]/60 tracking-widest uppercase transition-colors duration-300 translate-x-2 group-hover:translate-x-0">
-                     Explore Service →
-                   </span>
                 </div>
                 <h3 className="font-display font-bold text-2xl md:text-3xl uppercase tracking-tighter text-[#F5EAD2] mb-4 group-hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.1)] transition-all">
                   {srv.title}
                 </h3>
-                <p className="font-body text-[#CFC7B2] text-sm md:text-base leading-relaxed max-w-sm mb-12">
+                <p className="font-body text-[#CFC7B2] text-sm md:text-base leading-relaxed max-w-xl mb-12">
                   {srv.desc}
                 </p>
               </div>
 
-              <div className="flex flex-wrap gap-3 relative z-10 border-t border-[#D8B336]/10 pt-6 mt-auto">
+              <div className="flex flex-wrap gap-2 relative z-10 pt-6 mt-auto">
+                <p className="w-full font-mono text-[9px] text-[#D8B336] tracking-widest uppercase mb-3">Includes</p>
                 {srv.tags.map((tag, idx) => (
-                   <span key={idx} className="font-mono text-[9px] text-[#9D9483] tracking-widest uppercase bg-black/20 border border-white/5 py-1.5 px-3 rounded-sm group-hover:border-[#D8B336]/20 group-hover:text-[#CFC7B2] transition-colors">
+                   <span key={idx} className="font-body text-[11px] text-[#9D9483] bg-black/20 border border-white/5 py-1 px-3 rounded-sm group-hover:border-[#D8B336]/20 group-hover:text-[#CFC7B2] transition-colors">
                      {tag}
                    </span>
                 ))}
@@ -93,67 +102,68 @@ export const Services: React.FC<{ onNavigate: (view: string) => void }> = ({ onN
         </div>
       </section>
 
-      {/* Detailed Service Showcase Module */}
+      {/* Production Capabilities Module */}
       <div className="flex flex-col gap-0 border-y border-[#D8B336]/10 overflow-hidden">
         
-        {/* Showcase: AI-Aided VFX */}
-        <section className="py-24 md:py-32 px-6 md:px-12 max-w-[1440px] mx-auto w-full relative">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
+        <section className="py-16 md:py-24 px-6 md:px-12 max-w-[1440px] mx-auto w-full relative">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
             
-            {/* Left Visual Area */}
-            <div className="lg:col-span-5 w-full aspect-square md:aspect-[4/5] bg-gradient-to-br from-[#0c0804] to-black border border-[#D8B336]/20 relative flex items-center justify-center bg-grain overflow-hidden group">
-               {/* Abstract lighting and grid */}
-               <div className="absolute inset-0 opacity-40 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-[#D8B336]/20 via-transparent to-transparent"></div>
-               <div className="absolute w-[200%] h-[200%] border-[0.5px] border-[#D8B336]/10 rounded-full blur-[1px] -translate-x-1/4 -translate-y-1/4"></div>
-               <div className="absolute w-[150%] h-[150%] border-[0.5px] border-[#D8B336]/5 rounded-full blur-[2px] translate-x-1/4 translate-y-1/4"></div>
-               
-               <div className="absolute top-6 left-6 flex flex-col gap-1 z-10">
-                 <p className="font-mono text-[9px] text-[#D8B336] tracking-widest uppercase">VISUAL PREVIEW</p>
-                 <p className="font-mono text-xs text-white/70 tracking-widest uppercase">AI-AIDED VFX</p>
-               </div>
-
-               {/* Simulated focal points / tracking markers */}
-               <div className="absolute top-1/4 right-1/4 w-2 h-2 border border-[#D8B336] rounded-full flex items-center justify-center">
-                  <div className="w-0.5 h-0.5 bg-[#D8B336]"></div>
-               </div>
-               <div className="absolute bottom-1/3 left-1/3 w-3 h-3 border border-[#D8B336]/50 rounded-full flex items-center justify-center">
-                  <div className="w-1 h-1 bg-[#D8B336]/50"></div>
-               </div>
-               <div className="absolute top-[45%] left-1/2 w-64 h-[1px] bg-gradient-to-r from-transparent via-[#D8B336]/30 to-transparent -translate-x-1/2"></div>
-               <div className="absolute top-1/2 left-[45%] w-[1px] h-64 bg-gradient-to-b from-transparent via-[#D8B336]/30 to-transparent -translate-y-1/2"></div>
-            </div>
-
-            {/* Right Content Area */}
-            <div className="lg:col-span-7 flex flex-col">
+            {/* Left Content Area */}
+            <div className="lg:col-span-5 flex flex-col">
               <p className="font-mono text-[10px] text-[#D8B336] uppercase tracking-widest mb-4 border-l border-[#D8B336] pl-4">
-                SERVICE 04
+                PIPELINE CAPABILITIES
               </p>
-              <h2 className="font-display font-black text-4xl md:text-5xl text-ivory tracking-tight uppercase mb-6">
-                AI-Aided VFX
+              <h2 className="font-display font-black text-4xl md:text-5xl text-ivory tracking-tight uppercase mb-6 leading-[1.1]">
+                FROM STORY TO FINAL DELIVERY.
               </h2>
-              <p className="font-body text-[#CFC7B2] text-sm md:text-base leading-relaxed mb-12 max-w-xl">
-                We use AI-enhanced VFX workflows to create impossible shots, extend worlds, clean plates, generate effects, and support high-impact cinematic visuals.
+              <p className="font-body text-[#CFC7B2] text-sm md:text-base leading-relaxed max-w-md">
+                Every SagaNix production is supported by a modular pipeline that can be used for movies, trailers, pre-visualisation, VFX, and brand commercials.
               </p>
-              
-              <div className="flex flex-col gap-4 max-w-2xl">
-                {[
-                  { title: "Neural scene extensions for world building" },
-                  { title: "Atmospheric FX synthesis" },
-                  { title: "Face and character locking" },
-                  { title: "Digital body doubles" },
-                  { title: "Automated clean-plate generation" },
-                  { title: "Dynamic lighting re-projection" }
-                ].map((item, i) => (
-                   <div key={i} className="group relative flex items-center gap-6 py-4 px-6 bg-white/[0.015] border border-[#D8B336]/10 hover:border-[#D8B336]/40 hover:bg-white/[0.03] transition-all duration-300">
-                     <span className="font-mono text-[9px] text-[#D8B336]/50 group-hover:text-[#D8B336] transition-colors font-bold w-4">
-                       {i + 1}
-                     </span>
-                     <span className="font-mono text-xs uppercase tracking-widest text-[#CFC7B2] group-hover:text-white transition-colors">
-                       {item.title}
-                     </span>
+            </div>
+            
+            {/* Right Capabilities Grid */}
+            <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-8">
+              {[
+                { 
+                  num: "01",
+                  title: "Story & Development", 
+                  items: ["Story concept", "Logline", "Screenplay direction", "Narrative structure", "Mood and genre direction"]
+                },
+                { 
+                  num: "02",
+                  title: "Visual World Building", 
+                  items: ["Character design", "Character bible", "World bible", "Costume references", "Props and environments"]
+                },
+                { 
+                  num: "03",
+                  title: "AI Production", 
+                  items: ["Shot breakdowns", "Storyboards", "Cinematic keyframes", "AI cinematography", "Scene generation", "Motion prompts"]
+                },
+                { 
+                  num: "04",
+                  title: "Post & Delivery", 
+                  items: ["AI VFX", "Edit direction", "Sound direction", "Color and mood direction", "Final delivery formats"]
+                }
+              ].map((category, i) => (
+                 <div key={i} className="flex flex-col p-6 bg-white/[0.015] border border-[#D8B336]/10">
+                   <div className="flex items-center gap-4 mb-6">
+                     <span className="font-mono text-[#D8B336]/50 text-sm font-bold">{category.num}</span>
+                     <h3 className="font-mono text-xs uppercase tracking-widest text-[#F5EAD2]">
+                       {category.title}
+                     </h3>
                    </div>
-                ))}
-              </div>
+                   <div className="flex flex-col gap-3">
+                     {category.items.map((item, idx) => (
+                       <div key={idx} className="flex items-start gap-3">
+                         <span className="w-1 h-1 bg-[#D8B336]/30 mt-1.5 shrink-0 rounded-full"></span>
+                         <span className="font-body text-sm text-[#CFC7B2]">
+                           {item}
+                         </span>
+                       </div>
+                     ))}
+                   </div>
+                 </div>
+              ))}
             </div>
             
           </div>
@@ -162,7 +172,7 @@ export const Services: React.FC<{ onNavigate: (view: string) => void }> = ({ onN
       </div>
 
       {/* Deliverables & Best For */}
-      <section className="py-24 md:py-32 px-6 md:px-12 max-w-[1440px] mx-auto w-full">
+      <section className="py-16 md:py-24 px-6 md:px-12 max-w-[1440px] mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 relative">
           
           {/* Deliverables Column */}
@@ -180,16 +190,20 @@ export const Services: React.FC<{ onNavigate: (view: string) => void }> = ({ onN
             <div className="flex flex-col gap-6">
               {[
                 {
-                  title: "Visual Development",
-                  items: ["Cinematic keyframes", "Character sheets", "Storyboard decks", "World-building decks", "Reference packs"]
+                  title: "Film Packages",
+                  items: ["Full-length AI movie pipeline", "Short film pipeline", "Trailer package", "Proof-of-concept film"]
                 },
                 {
-                  title: "Motion & Sequence",
-                  items: ["Video sequences", "Shot lists", "Motion prompts", "Social video exports"]
+                  title: "Pre-Production Assets",
+                  items: ["Storyboards", "Shot breakdowns", "Character bible", "World bible", "Look development frames"]
                 },
                 {
-                  title: "Campaign & Brand",
-                  items: ["Campaign visuals", "Ad creatives", "Pitch visuals"]
+                  title: "Production Assets",
+                  items: ["Cinematic keyframes", "AI video sequences", "Motion prompts", "VFX frames", "Scene variations"]
+                },
+                {
+                  title: "Commercial Assets",
+                  items: ["Brand films", "Product commercials", "Campaign visuals", "Social exports", "Ad variations"]
                 }
               ].map((cluster, i) => (
                  <div key={i} className="flex flex-col bg-white/[0.015] border border-[#D8B336]/10 p-6 hover:border-[#D8B336]/30 transition-colors">
@@ -223,16 +237,16 @@ export const Services: React.FC<{ onNavigate: (view: string) => void }> = ({ onN
             <div className="flex flex-col gap-6">
               <div className="flex flex-wrap gap-3">
                 {[
-                  "Film teams", 
+                  "Film producers", 
+                  "Directors", 
+                  "Writers", 
+                  "Production houses", 
                   "Music labels", 
+                  "Brand teams", 
                   "Agencies", 
-                  "Creators", 
-                  "Fashion brands", 
                   "DTC brands", 
-                  "Product companies", 
                   "Mythology / fantasy projects", 
-                  "Product campaigns", 
-                  "Social-first brands"
+                  "Cinematic IP creators"
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3 px-5 py-3 border border-[#D8B336]/20 bg-white/[0.01] hover:bg-[#D8B336]/5 hover:border-[#D8B336]/40 transition-all cursor-default group">
                      <span className="w-1 h-1 bg-[#D8B336]/30 group-hover:bg-[#D8B336] transition-colors rounded-full"></span>

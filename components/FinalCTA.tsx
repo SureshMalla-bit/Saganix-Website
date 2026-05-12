@@ -2,7 +2,7 @@ import React from 'react';
 
 export const FinalCTA: React.FC<{ onNavigate: (view: string) => void }> = ({ onNavigate }) => {
   return (
-    <section className="relative py-24 md:py-32 px-6 w-full border-t border-gold/10 overflow-hidden bg-[#030303] bg-grain">
+    <section className="relative py-16 md:py-24 px-6 w-full border-t border-gold/10 overflow-hidden bg-[#030303] bg-grain">
       <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#030303] via-[#0C0804]/30 to-[#030303]"></div>
       
       <div className="relative z-10 max-w-6xl mx-auto border border-gold/10 bg-white/[0.015] p-8 md:p-16 lg:p-24 rounded-sm flex flex-col lg:flex-row items-center lg:items-start justify-between gap-16 overflow-hidden">
@@ -18,10 +18,10 @@ export const FinalCTA: React.FC<{ onNavigate: (view: string) => void }> = ({ onN
           </p>
           <h2 className="font-display font-black text-4xl md:text-5xl uppercase tracking-tight mb-8 leading-[1.1]">
             <span className="text-[#F5EAD2] block mb-2">BUILD YOUR NEXT</span>
-            <span className="block text-transparent" style={{ WebkitTextStroke: '1px #A67C1F' }}>VISUAL WORLD.</span>
+            <span className="block text-transparent" style={{ WebkitTextStroke: '1px #A67C1F' }}>AI FILM PIPELINE.</span>
           </h2>
           <p className="font-body text-[#CFC7B2] text-sm md:text-base leading-relaxed max-w-md mb-12">
-            Bring us your script, product, campaign, or character idea. We’ll shape it into a cinematic production roadmap.
+            Bring us your story, script, product, or cinematic universe. We’ll shape it into a production roadmap for a full-length AI movie, short film, trailer, pre-vis, VFX sequence, or brand commercial.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto">

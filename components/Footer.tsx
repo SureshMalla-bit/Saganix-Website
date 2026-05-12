@@ -9,11 +9,11 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ onGoToHub, onNavigate }) => {
   return (
-    <footer className="w-full py-20 border-t border-gold/10 bg-warm-black">
+    <footer className="w-full pt-16 pb-10 border-t border-gold/10 bg-[#0c0804]">
       <div className="max-w-[1440px] mx-auto px-6 md:px-12">
         
         {/* Top Section: Logo & Links Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 mb-12">
           
           {/* Logo Column (Span 4) */}
           <div className="md:col-span-4 flex flex-col items-start gap-6">
@@ -62,13 +62,14 @@ export const Footer: React.FC<FooterProps> = ({ onGoToHub, onNavigate }) => {
              <div className="flex flex-col space-y-4 items-start">
                 <a href="https://www.instagram.com/saganixstudios" target="_blank" rel="noopener noreferrer" className="font-body text-sm text-[#CFC7B2] hover:text-ivory transition-colors">Instagram</a>
                 <a href="#" className="font-body text-sm text-[#CFC7B2] hover:text-ivory transition-colors">LinkedIn</a>
+                <a href="#" className="font-body text-sm text-[#CFC7B2] hover:text-ivory transition-colors">WhatsApp</a>
              </div>
           </div>
 
         </div>
 
         {/* Bottom Section: Copyright */}
-        <div className="w-full text-center border-t border-gold/10 pt-12 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div className="w-full text-center border-t border-gold/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="font-mono text-[10px] text-[#9D9483] tracking-widest uppercase">© 2026 SAGANIX STUDIOS. ALL RIGHTS RESERVED.</p>
             <div className="flex gap-4">
               <a href="#" className="font-mono text-[10px] text-[#9D9483] hover:text-ivory uppercase tracking-widest">Privacy Policy</a>

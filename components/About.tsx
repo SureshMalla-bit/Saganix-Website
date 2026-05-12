@@ -6,9 +6,9 @@ import { FinalCTA } from './FinalCTA';
 
 export const About: React.FC<{ onNavigate: (view: string) => void }> = ({ onNavigate }) => {
   return (
-    <div className="flex flex-col bg-background pt-28">
+    <div className="flex flex-col bg-background pt-24 md:pt-28">
       {/* 1. About Hero */}
-      <section className="py-24 md:py-32 px-6 md:px-12 max-w-[1440px] mx-auto w-full relative">
+      <section className="pt-16 md:pt-24 pb-16 md:pb-20 px-6 md:px-12 max-w-[1440px] mx-auto w-full relative">
         <div className="flex flex-col md:flex-row justify-between items-start gap-8">
           <div className="max-w-4xl">
             <p className="font-mono text-xs text-[#D8B336] uppercase tracking-widest mb-6 border-l border-[#D8B336] pl-4">
@@ -18,8 +18,11 @@ export const About: React.FC<{ onNavigate: (view: string) => void }> = ({ onNavi
               <span className="text-ivory block mb-2">BUILT FOR THE NEXT ERA</span>
               <span className="block text-transparent" style={{ WebkitTextStroke: '1px #CFC7B2' }}>OF VISUAL PRODUCTION.</span>
             </h1>
+            <p className="font-body text-[#CFC7B2] text-base md:text-lg max-w-2xl leading-relaxed mb-6">
+              SagaNix Studios is built for end-to-end AI film and visual production. We create full-length AI movies, short films, trailers, pre-visualisation, AI VFX, and AI brand commercials through cinematic generative pipelines.
+            </p>
             <p className="font-body text-[#CFC7B2] text-base md:text-lg max-w-2xl leading-relaxed">
-              We combine cinematic direction, design thinking, and generative production workflows to create films, brand visuals, characters, and worlds at production scale.
+              Our work combines story, camera grammar, character continuity, world-building, AI cinematography, VFX, edit direction, and delivery systems — so every project feels directed, not randomly generated.
             </p>
           </div>
           
@@ -32,7 +35,7 @@ export const About: React.FC<{ onNavigate: (view: string) => void }> = ({ onNavi
       </section>
 
       {/* 2. Studio Philosophy */}
-      <section className="py-24 md:py-32 px-6 md:px-12 max-w-[1440px] mx-auto w-full border-t border-gold/10">
+      <section className="py-16 md:py-24 px-6 md:px-12 max-w-[1440px] mx-auto w-full border-t border-gold/10">
         <div className="flex flex-col md:flex-row gap-12 lg:gap-24">
           <div className="md:w-1/2">
             <h2 className="font-display font-black text-3xl md:text-5xl uppercase tracking-tighter text-ivory mb-6 leading-[1.1]">
@@ -69,7 +72,7 @@ export const About: React.FC<{ onNavigate: (view: string) => void }> = ({ onNavi
       </section>
 
       {/* 3. Founders */}
-      <section className="py-24 md:py-32 bg-warm-black border-y border-gold/10 px-6 md:px-12">
+      <section className="py-16 md:py-24 bg-warm-black border-y border-gold/10 px-6 md:px-12">
         <div className="max-w-[1440px] mx-auto w-full">
           <h2 className="font-display font-black text-4xl md:text-5xl uppercase tracking-tighter text-ivory mb-16 text-center">
             Founders
@@ -123,7 +126,7 @@ export const About: React.FC<{ onNavigate: (view: string) => void }> = ({ onNavi
       </section>
 
       {/* 4. What makes us different */}
-      <section className="py-24 md:py-32 px-6 md:px-12 max-w-[1440px] mx-auto w-full relative">
+      <section className="py-16 md:py-24 px-6 md:px-12 max-w-[1440px] mx-auto w-full relative">
         {/* Subtle grid/background element */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-[#D8B336]/5 via-transparent to-transparent opacity-50 z-0 pointer-events-none"></div>
         <div className="absolute right-0 top-1/2 -translate-y-1/2 w-96 h-96 border-[1px] border-[#D8B336]/10 rounded-full blur-[2px] opacity-20 pointer-events-none"></div>
@@ -194,7 +197,7 @@ export const About: React.FC<{ onNavigate: (view: string) => void }> = ({ onNavi
       </section>
 
       {/* 5. Studio Values */}
-      <section className="py-24 md:py-32 px-6 md:px-12 max-w-[1440px] mx-auto w-full border-t border-[#D8B336]/10">
+      <section className="py-16 md:py-24 px-6 md:px-12 max-w-[1440px] mx-auto w-full border-t border-[#D8B336]/10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start relative">
           
           <div className="lg:col-span-5 flex flex-col relative z-10">

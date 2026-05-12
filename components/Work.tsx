@@ -4,9 +4,9 @@ import { FinalCTA } from './FinalCTA';
 
 export const Work: React.FC<{ onNavigate: (view: string) => void }> = ({ onNavigate }) => {
   return (
-    <div className="flex flex-col bg-background pt-28">
+    <div className="flex flex-col bg-background pt-24 md:pt-28">
       {/* 1. Work Hero */}
-      <section className="py-24 md:py-32 px-6 md:px-12 max-w-[1440px] mx-auto w-full relative">
+      <section className="pt-16 md:pt-24 pb-12 md:pb-16 px-6 md:px-12 max-w-[1440px] mx-auto w-full relative">
         <div className="max-w-4xl">
           <p className="font-mono text-xs text-[#D8B336] uppercase tracking-widest mb-6 border-l border-[#D8B336] pl-4">
             SELECTED WORKS
@@ -23,30 +23,30 @@ export const Work: React.FC<{ onNavigate: (view: string) => void }> = ({ onNavig
       </section>
 
       {/* 2. Featured Projects */}
-      <section className="pb-24 md:pb-32 px-6 md:px-12 max-w-[1440px] mx-auto w-full flex flex-col gap-12 md:gap-24">
+      <section className="pb-16 md:pb-24 px-6 md:px-12 max-w-[1440px] mx-auto w-full flex flex-col gap-12 md:gap-24">
         {[
           { 
             title: "Ravana: The AI Mythology Sequence", 
-            tags: "Mythological AI Film / Character Design / World Building",
+            tags: "Mythological Worlds / Short Films",
             desc: "A cinematic visual system built around scale, devotion, divine atmosphere, and character continuity.",
             img: "/Images/bg1.png"
           },
           { 
             title: "Brand Film System", 
-            tags: "Commercial Visuals / Product Campaign / Launch Assets",
+            tags: "AI Brand Commercials",
             desc: "Luxury product visuals and campaign-ready cinematic assets built for high-end conversion.",
             img: "/Images/bg2.png"
           },
           { 
             title: "Character Design System", 
-            tags: "Character Continuity / Costume Design / Reference Sheets",
+            tags: "Character & World Bibles",
             desc: "Consistent AI characters, costume sheets, expressions, and production-ready references.",
             img: "/Images/bg3.png"
           },
           { 
-            title: "AI Ad Creative Engine", 
-            tags: "UGC Ads / Product Videos / Social Performance Creatives",
-            desc: "High-impact product frames, motion tests, and social-first launch visuals designed to convert.",
+            title: "Dark Fantasy World Concept", 
+            tags: "Pre-Visualisation",
+            desc: "High-impact world designs, shot concepts, and early visual planning for a feature film.",
             img: "/Images/bg1.png"
           }
         ].map((project, i) => (

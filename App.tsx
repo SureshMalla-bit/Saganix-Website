@@ -16,7 +16,7 @@ type ViewState = 'hub' | 'home' | 'work' | 'about' | 'services' | 'contact';
 
 const App: React.FC = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
-  const [view, setView] = useState<ViewState>('hub');
+  const [view, setView] = useState<ViewState>('home');
 
   const goToHub = () => setView('hub');
 

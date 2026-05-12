@@ -82,7 +82,7 @@ export const Hero: React.FC = () => {
         <div className="flex flex-col items-center justify-center animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300">
           {/* Secondary Heading */}
           <h2 className="font-mono text-[10px] md:text-xs text-ivory tracking-[0.25em] uppercase whitespace-nowrap mb-6">
-            India’s Next-Gen AI Film & Visual Production Studio
+            INDIA’S NEXT-GEN AI FILM & VISUAL PRODUCTION STUDIO
           </h2>
           
           <p className="font-mono text-gold text-[9px] md:text-[10px] tracking-[0.4em] uppercase mb-12">

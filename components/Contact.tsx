@@ -66,10 +66,10 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col bg-background pt-28">
+    <div className="flex flex-col bg-background pt-24 md:pt-28">
       
       {/* 1. Contact Hero */}
-      <section className="py-24 md:py-32 px-6 md:px-12 max-w-[1440px] mx-auto w-full relative">
+      <section className="pt-16 md:pt-24 pb-12 md:pb-16 px-6 md:px-12 max-w-[1440px] mx-auto w-full relative">
         <div className="max-w-4xl">
           <p className="font-mono text-xs text-[#D8B336] uppercase tracking-widest mb-6 border-l border-[#D8B336] pl-4">
             CONTACT US
@@ -84,7 +84,7 @@ export const Contact: React.FC = () => {
         </div>
       </section>
 
-      <section className="pb-24 px-6 md:px-12 max-w-[1440px] mx-auto w-full">
+      <section className="pb-16 md:pb-24 px-6 md:px-12 max-w-[1440px] mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
           
           {/* Form */}
