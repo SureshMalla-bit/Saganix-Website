@@ -25,58 +25,64 @@ export const Work: React.FC<{ onNavigate: (view: string) => void }> = ({ onNavig
       {/* 2. Featured Projects */}
       <section className="pb-16 md:pb-24 px-6 md:px-12 max-w-[1440px] mx-auto w-full flex flex-col gap-12 md:gap-24">
         {[
-          { 
-            title: "Ravana: The AI Mythology Sequence", 
-            tags: "Mythological Worlds / Short Films",
-            desc: "A cinematic visual system built around scale, devotion, divine atmosphere, and character continuity.",
-            img: "/Images/bg1.png"
+          {
+            num: "01",
+            title: "Lieutenant Norman: Bhairava",
+            tags: "AI Feature Film",
+            credits: "Generative AI Visuals & VFX — SagaNix Studios\nAI Cinematography — Suresh Malla & Aishyani N Malla",
+            badge: "From Amazon Bestseller Novel",
+            desc: "Full-length AI feature film based on the Amazon Bestseller Novel by Goutham Kool Monkk. SagaNix handled generative AI visuals, cinematography, VFX, sound designing, and complete post-production for Pings Cineworks.",
+            img: "/Images/Norman%20Poster.png"
           },
-          { 
-            title: "Brand Film System", 
-            tags: "AI Brand Commercials",
-            desc: "Luxury product visuals and campaign-ready cinematic assets built for high-end conversion.",
-            img: "/Images/bg2.png"
+          {
+            num: "02",
+            title: "Sardar Sarvai Papanna",
+            tags: "AI Historical Epic",
+            credits: "AI Powered — SagaNix Studios\nAI Lead Visual Artists — Suresh Malla & Aishyani N Malla",
+            badge: "The Rebel King of Telangana",
+            desc: "Epic historical AI film about the Rebel King of Telangana. SagaNix Studios led AI visual production for VG Movie Makers, with Story, Screenplay & Direction by Venkatesh Goud Lingampally.",
+            img: "/Images/Papanna%20Poster.png"
           },
-          { 
-            title: "Character Design System", 
-            tags: "Character & World Bibles",
-            desc: "Consistent AI characters, costume sheets, expressions, and production-ready references.",
-            img: "/Images/bg3.png"
-          },
-          { 
-            title: "Dark Fantasy World Concept", 
-            tags: "Pre-Visualisation",
-            desc: "High-impact world designs, shot concepts, and early visual planning for a feature film.",
-            img: "/Images/bg1.png"
+          {
+            num: "03",
+            title: "Jai Kisaan",
+            tags: "Award-Winning AI Short Film",
+            credits: "AI Animation — Suresh Malla / SagaNix Studios\nMusic & Arrangements — Kool Monkk",
+            badge: "9x International Award Winner",
+            desc: "Winner at Buddha International Film Festival 2026, Dada Saheb Phalke Film Festival-26, Asian Talent International Film Festival, Jaipur International Film Festival, Global Cineverse Film Festival, and more.",
+            img: "/Images/Jai%20Kisan%20Poster.png"
           }
         ].map((project, i) => (
-          <motion.div 
+          <motion.div
             key={i}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.7 }}
-            className="group grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center cursor-pointer"
+            className="group grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center"
           >
             <div className={`md:col-span-8 w-full aspect-video border border-gold/20 overflow-hidden relative ${i % 2 === 1 ? 'md:order-2' : ''}`}>
               <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-700 z-10" />
               <img src={project.img} alt={project.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2s] ease-out" />
-              <div className="absolute inset-0 border border-gold/0 group-hover:border-gold/40 transition-border duration-700 z-20" />
+              <div className="absolute inset-0 border border-gold/0 group-hover:border-gold/40 transition-all duration-700 z-20" />
             </div>
-            
+
             <div className={`md:col-span-4 flex flex-col ${i % 2 === 1 ? 'md:order-1 items-start md:items-end md:text-right' : 'items-start text-left'}`}>
-              <p className="font-mono text-[10px] md:text-xs text-gold uppercase tracking-widest mb-4">
-                {project.tags}
+              <span className="font-mono text-[9px] text-gold/50 uppercase tracking-widest border border-gold/20 px-2 py-0.5 mb-4">
+                {project.badge}
+              </span>
+              <p className="font-mono text-[10px] md:text-xs text-gold uppercase tracking-widest mb-3">
+                {project.num} — {project.tags}
               </p>
-              <h3 className="font-display font-black text-3xl md:text-4xl uppercase tracking-tighter text-ivory mb-6 group-hover:text-[#D8B336] transition-colors duration-300">
+              <h3 className="font-display font-black text-3xl md:text-4xl uppercase tracking-tighter text-ivory mb-4 group-hover:text-[#D8B336] transition-colors duration-300">
                 {project.title}
               </h3>
-              <p className="font-body text-[#CFC7B2] text-sm leading-relaxed mb-8">
+              <p className="font-body text-[#CFC7B2] text-sm leading-relaxed mb-4">
                 {project.desc}
               </p>
-              <button className="font-mono text-xs border border-gold/30 group-hover:bg-gold group-hover:text-black px-6 py-3 tracking-widest uppercase transition-all whitespace-nowrap bg-glass">
-                View Project
-              </button>
+              <p className="font-mono text-[9px] text-[#9D9483] uppercase tracking-widest leading-relaxed mb-8 whitespace-pre-line">
+                {project.credits}
+              </p>
             </div>
           </motion.div>
         ))}
