@@ -62,21 +62,21 @@ export const HomeContent: React.FC<{ onNavigate: (view: string) => void; onOpenF
               title: "Lieutenant Norman: Bhairava",
               tag: "AI Feature Film",
               desc: "Generative AI visuals, cinematography & full post-production. Based on the Amazon Bestseller Novel by Goutham Kool Monkk.",
-              img: "/Images/lieutenant-norman.jpg"
+              img: "/Images/Norman%20Poster.png"
             },
             {
               num: "02",
               title: "Sardar Sarvai Papanna",
               tag: "AI Historical Epic",
               desc: "The Rebel King of Telangana. AI-powered epic historical — visuals, VFX & cinematography by Suresh Malla & Aishyani N Malla.",
-              img: "/Images/papanna.jpg"
+              img: "/Images/Papanna%20Poster.png"
             },
             {
               num: "03",
               title: "Jai Kisaan",
               tag: "9x Award-Winning AI Short Film",
               desc: "Winner — Buddha IFF, Dada Saheb Phalke, Asian Talent IFF & more. AI Animation by SagaNix Studios.",
-              img: "/Images/jai-kisaan.jpg"
+              img: "/Images/Jai%20Kisan%20Poster.png"
             }
           ].map((work, i) => (
             <motion.div

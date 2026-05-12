@@ -62,7 +62,7 @@ export const Hero: React.FC<{ onOpenForm: () => void }> = ({ onOpenForm }) => {
             <source src={heroVideos[currentVideoIndex]} type="video/mp4" />
           </video>
         ) : (
-          <img src="/Images/jai-kisaan.jpg" alt="Hero Background" className="w-full h-full object-cover opacity-40 contrast-110" />
+          <img src="/Images/Jai%20Kisan%20Poster.png" alt="Hero Background" className="w-full h-full object-cover opacity-40 contrast-110" />
         )}
         {/* Dark Cinematic Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/20 to-background" />
