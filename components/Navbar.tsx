@@ -42,7 +42,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenForm, onGoToHub, onNavigat
         {/* Left: Logo */}
         <div 
           onClick={() => onNavigate('home')}
-          className="cursor-pointer hover:opacity-80 transition-opacity duration-300 transform scale-75 md:scale-75 origin-left flex items-center"
+          className="cursor-pointer hover:opacity-80 transition-opacity duration-300 flex items-center"
         >
           <Logo />
         </div>
