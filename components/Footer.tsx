@@ -72,8 +72,8 @@ export const Footer: React.FC<FooterProps> = ({ onGoToHub, onNavigate }) => {
         <div className="w-full text-center border-t border-gold/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="font-mono text-[10px] text-[#9D9483] tracking-widest uppercase">© 2026 SAGANIX STUDIOS. ALL RIGHTS RESERVED.</p>
             <div className="flex gap-4">
-              <a href="#" className="font-mono text-[10px] text-[#9D9483] hover:text-ivory uppercase tracking-widest">Privacy Policy</a>
-              <a href="#" className="font-mono text-[10px] text-[#9D9483] hover:text-ivory uppercase tracking-widest">Terms of Service</a>
+              <button onClick={() => onNavigate && onNavigate('privacy')} className="font-mono text-[10px] text-[#9D9483] hover:text-ivory uppercase tracking-widest transition-colors">Privacy Policy</button>
+              <button onClick={() => onNavigate && onNavigate('terms')} className="font-mono text-[10px] text-[#9D9483] hover:text-ivory uppercase tracking-widest transition-colors">Terms of Service</button>
             </div>
         </div>
       </div>

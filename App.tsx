@@ -11,8 +11,10 @@ import { ComingSoon } from './components/ComingSoon';
 import { About } from './components/About';
 import { Services } from './components/Services';
 import { Contact } from './components/Contact';
+import { PrivacyPolicy } from './components/PrivacyPolicy';
+import { Terms } from './components/Terms';
 
-type ViewState = 'hub' | 'home' | 'work' | 'about' | 'services' | 'contact';
+type ViewState = 'hub' | 'home' | 'work' | 'about' | 'services' | 'contact' | 'privacy' | 'terms';
 
 const App: React.FC = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -40,6 +42,10 @@ const App: React.FC = () => {
             return <Services onNavigate={(v) => setView(v as any)} />;
         case 'contact':
             return <Contact />;
+        case 'privacy':
+            return <PrivacyPolicy onNavigate={(v) => setView(v as any)} />;
+        case 'terms':
+            return <Terms onNavigate={(v) => setView(v as any)} />;
         case 'work':
             return <Work onNavigate={(v) => setView(v as any)} />;
         case 'home':
